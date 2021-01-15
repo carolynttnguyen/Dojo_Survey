@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Let's Take a Dojo Survey!</title>
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index_style.css' %}">
+</head>
+
+<body>
+    <div>
+        <form action="result" method="post">
+            {% csrf_token %}
+            <!-- input for name -->
+            <p>Your Name: <input name="name" type="text"></p> <br>
+
+            <!-- input for dojo location -->
+            <p> 
+                <select name="location">
+                    <option value="San_Jose">San Jose</option>
+                    <option value="Orange_County">Orange County</option>
+                </select>
+            </p><br>
+
+            <!-- input for favorite language -->
+            <p> Favorite Language
+                <select name="language">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                </select>
+            </p><br>
+
+            <!-- comment section -->
+            <p>
+                Comment (Optionals): <br>
+                <textarea name="comment"></textarea>
+            </p><br>
+
+            <input id="button" type="submit" value="Submit">
+
+    
+        </form>
+
+    </div>
+    
+</body>
+</html>
