@@ -11,7 +11,7 @@
 
 <body>
     <div>
-        <form action="result" method="post">
+        <form action="/survey" method="post">
             {% csrf_token %}
             <!-- input for name -->
             <p>Your Name: <input name="name" type="text"></p> <br>
@@ -36,7 +36,7 @@
 
             <!-- comment section -->
             <p>
-                Comment (Optionals): <br>
+                Comment (Optional): <br>
                 <textarea name="comment"></textarea>
             </p><br>
 
